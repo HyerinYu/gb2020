@@ -1,0 +1,189 @@
+<!doctype html>
+
+<style>
+  .image-preview {
+    width:200px;
+    min-height: 100px;
+    border: 2px solid #dddddd;
+  margin-top: 15px;
+  margin-left: 100px;
+  margin-right: 100px;
+}
+.image-preview__image {
+  display: none;
+  width: 100%
+}
+
+.image-preview2 {
+  width:200px;
+  min-height: 100px;
+  border: 2px solid #dddddd;
+margin-top: 15px;
+margin-left: 100px;
+margin-right: 100px;
+}
+.image-preview__image2 {
+display: none;
+width: 100%
+}
+
+.image-preview3 {
+  width:200px;
+  min-height: 100px;
+  border: 2px solid #dddddd;
+margin-top: 15px;
+margin-left: 100px;
+margin-right: 100px;
+}
+.image-preview__image3 {
+display: none;
+width: 100%
+}
+
+.button {
+  margin-top: 280px;
+}
+
+
+body {
+  background-image: url('post2-03.png');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+</style>
+
+</head>
+
+
+<body>
+
+<div>
+
+  <audio src="We Wish You A Merry Xmas - Audionautix.mp3" controls autoplay loop></audio>
+</div>
+
+
+<div>
+<center>
+      <input type="file" name="inpFile" id= "inpFile">
+      <div class="image-preview" id="imagePreview">
+          <img src="" alt="Image Preview" class="image-preview__image">
+
+        </center>
+</div>
+
+<div align=left>
+      <input type="file" name="inpFile2" id= "inpFile2">
+      <div class="image-preview2" id="imagePreview2">
+          <img src="" alt="Image Preview2" class="image-preview__image2">
+</div>
+
+<div align=right>
+      <input type="file" name="inpFile3" id= "inpFile3">
+      <div class="image-preview3" id="imagePreview3">
+          <img src="" alt="Image Preview3" class="image-preview__image3">
+</div>
+
+
+<div>
+<div class="button">
+<center>
+  <button type="button" onclick="window.open('https://www.youtube.com/watch?v=zFAabYDn7N4') ">Goodbye 2020!</button>
+</center>
+</div>
+
+
+
+
+<script>
+   const inpFile = document.getElementById("inpFile");
+   const previewContainer = document.getElementById("imagePreview");
+   const previewImage = previewContainer.querySelector(".image-preview__image");
+
+
+  inpFile2.addEventListener("change", function() {
+    const file = this.files[0];
+
+  if (file) {
+    const reader = new FileReader();
+    previewImage.style.display = "block";
+
+    reader.addEventListener("load", function() {
+      console.log(this);
+    previewImage.setAttribute("src", this.result);
+
+
+
+
+
+
+
+});
+
+reader.readAsDataURL(file);
+
+  }
+
+
+});
+</script>
+
+<script>
+   const inpFile2 = document.getElementById("inpFile2");
+   const previewContainer2 = document.getElementById("imagePreview2");
+   const previewImage2 = previewContainer2.querySelector(".image-preview__image2");
+
+
+  inpFile2.addEventListener("change", function() {
+    const file = this.files[0];
+
+  if (file) {
+    const reader = new FileReader();
+    previewImage2.style.display = "block";
+
+    reader.addEventListener("load", function() {
+      console.log(this);
+    previewImage2.setAttribute("src", this.result);
+
+});
+
+reader.readAsDataURL(file);
+
+  }
+
+
+});
+</script>
+
+</script>
+
+<script>
+   const inpFile3 = document.getElementById("inpFile3");
+   const previewContainer3 = document.getElementById("imagePreview3");
+   const previewImage3 = previewContainer3.querySelector(".image-preview__image3");
+
+
+  inpFile2.addEventListener("change", function() {
+    const file = this.files[0];
+
+  if (file) {
+    const reader = new FileReader();
+    previewImage3.style.display = "block";
+
+    reader.addEventListener("load", function() {
+      console.log(this);
+    previewImage3.setAttribute("src", this.result);
+
+});
+
+reader.readAsDataURL(file);
+  }
+});
+</script>
+
+
+</body>
+
+
+</html>
